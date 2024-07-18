@@ -36,6 +36,8 @@ curl -sL "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_ch
 
 tar -xzf eksctl_$PLATFORM.tar.gz -C /tmp && rm eksctl_$PLATFORM.tar.gz
 
+sudo mv /tmp/eksctl /usr/local/bin
+
 # ARGOCD CLI
 
 curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
@@ -44,4 +46,4 @@ sudo install -m 555 argocd-linux-amd64 /usr/local/bin/argocd
 
 rm argocd-linux-amd64
 
-sudo mv /tmp/eksctl /usr/local/bin
+
