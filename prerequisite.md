@@ -14,3 +14,9 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#c
 
 Argo CD CLI(Not the actual Argo CD Installation) - 
 https://argo-cd.readthedocs.io/en/stable/cli_installation/#installation
+
+# Commands
+
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
