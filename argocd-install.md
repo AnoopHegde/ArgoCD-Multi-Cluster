@@ -30,3 +30,15 @@ kubectl edit svc argocd-server -n argocd
 ```
 
 and change the type to NodePort from ClusterIP
+
+## ARGOCD Credentials
+
+admin
+
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 --decode ; echo
+
+## Connect ArgoCD from Hub Cluster to mutli spoke clusters
+
+
+
+
