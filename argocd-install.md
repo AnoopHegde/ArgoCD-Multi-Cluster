@@ -11,6 +11,13 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 
 https://github.com/argoproj/argo-cd/blob/54f1572d46d8d611018f4854cf2f24a24a3ac088/docs/operator-manual/argocd-cmd-params-cm.yaml#L82
 
+kubectl get cm -n argocd
+
+kubectl edit cm argocd-cmd-params-cm -n argocd
+
+data:
+ server.insecure: "true"
+
 ## Expose Argo CD Server Service in NodePort Mode
 
 ```
