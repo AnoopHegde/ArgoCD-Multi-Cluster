@@ -37,8 +37,12 @@ admin
 
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 --decode ; echo
 
-## Connect ArgoCD from Hub Cluster to mutli spoke clusters
+## Connect ArgoCD from Hub Cluster to mutli s3.139.90.129:31132poke clusters
 
+argocd login  3.139.90.129:31132
 
+argocd cluster add prdk8admin@spoke-cluster-1.us-east-2.eksctl.io --server 3.139.90.129:31132
+
+argocd cluster add prdk8admin@spoke-cluster-2.us-east-2.eksctl.io --server 3.139.90.129:31132
 
 
