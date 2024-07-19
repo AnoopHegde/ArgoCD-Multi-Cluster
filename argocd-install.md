@@ -17,7 +17,7 @@ kubectl edit cm argocd-cmd-params-cm -n argocd
 
 data:
 
- server.insecure: "true"
+    server.insecure: "true"
 
  kubectl describe deployment/argocd-server -n argocd
 
