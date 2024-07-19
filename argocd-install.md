@@ -16,7 +16,12 @@ kubectl get cm -n argocd
 kubectl edit cm argocd-cmd-params-cm -n argocd
 
 data:
+
  server.insecure: "true"
+
+ kubectl describe deployment/argocd-server -n argocd
+
+ kubectl edit deployment/argocd-server -n argocd
 
 ## Expose Argo CD Server Service in NodePort Mode
 
